@@ -3,7 +3,7 @@ WORKDIR /app
 COPY site /app
 RUN composer install
 
-FROM php:7.2-apache
+FROM php:7.4-cli
 RUN docker-php-ext-install pdo pdo_mysql
 
 EXPOSE 8080
